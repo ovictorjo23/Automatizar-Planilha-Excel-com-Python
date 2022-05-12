@@ -2,9 +2,13 @@ import openpyxl
 
 book = openpyxl.Workbook()
 
+#print(book.sheetnames)
+
 book.create_sheet('Frutas')
 
 frutas_page = book['Frutas']
+
+frutas_page.append(['Frutas','Quantidade','Preço'])
 
 frutas_page.append(['Banana', '5', 'R$ 10,00'])
 frutas_page.append(['Maçã', '7', 'R$ 16,00'])
